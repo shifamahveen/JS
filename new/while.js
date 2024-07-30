@@ -1,7 +1,13 @@
-let i = 1;
-while (i<=50) {
-    if (i%5 === 0){
-        document.write(i, "<br>")
+let num = prompt("Enter a number: ")
+let fact = 0
+
+for(let i=1; i<=num; i++) {
+    if (num%i === 0) {
+        fact += 1
     }
-    i++
+}
+if(fact === 2){
+    console.log("Prime Number")
+} else {
+    console.log("Not a prime number")
 }
