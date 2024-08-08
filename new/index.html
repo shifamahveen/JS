@@ -6,10 +6,34 @@
     <title>Document</title>  
 </head>
 <body>
-    <!-- script file > inline js -->
-   <a href="#" id="btn1">Login</a>
-   <button ondblclick="alert('btn clicked twice')">Double click</button>
+    <form action="">
+        <label for="">Name</label>
+        <input type="text" placeholder="enter name" value="Alex">
 
-   <script src="./events.js"></script>
+        <label for="">Course</label>
+        <select name="" id="">
+            <option value="cse">CSE</option>
+            <option value="ece">ECE</option>
+        </select>
+        <span id="msg"></span>
+
+    </form>
+
+   <script>
+    
+        let select = document.querySelector("select");
+        let msg = document.getElementById("msg");
+
+        select.addEventListener("change", () => {
+            msg.innerText = "Selection changed";
+        })
+        // let input = document.querySelector("input");
+        // let msg = document.getElementById("msg");
+
+        // input.addEventListener("change", () => {
+        //     msg.innerText = "You have entered character";
+        // });
+        
+   </script>
 </body>
 </html>
