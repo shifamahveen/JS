@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./css/game.css">
+</head>
+<body>
+    <section>
+        <!-- game block -->
+         <div class="main">
+            <h1>Rock Paper Scissors</h1>
+
+            <div class="choices">
+                <div class="choice" onclick="game('rock')">
+                    <img src="./images/rock.jpg" width="100px" alt="">
+                </div>
+                <div class="choice" onclick="game('paper')">
+                    <img src="./images/paper.jpg" width="100px" alt="">
+                </div>
+                <div class="choice" onclick="game('scissors')">
+                    <img src="./images/scissors.jpg" width="100px" alt="">
+                </div>
+            </div>
+
+            <!-- result -->
+             <div>Your Choice: <span id="user"></span></div>
+             <div>Computer Choice: <span id="computer"></span></div>
+             <div>Result: <span id="result"></span></div>
+         </div>
+    </section>
+
+    <script>
+        function game(user) {
+            let choices = ['rock', 'paper', 'scissors'];
+            let index = parseInt(Math.random() * 3);
+            let computer = choices[index];
+            let result = "";
+
+            // determine winner
+            if (user === computer) {
+                result = "Its a tie!";
+            } else if (
+                (user === 'rock' && computer === 'scissors')
+                || (user === 'paper' && computer === 'rock')
+                || (user === 'scissors' && computer === 'paper')
+            ) {
+                result = "You won!";
+            } else {
+                result = "Computer Won!"
+            }
+
+            document.getElementById("user").innerText = user;
+            document.getElementById("computer").innerText = computer;
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+</body>
+</html>

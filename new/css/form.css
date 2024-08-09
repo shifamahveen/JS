@@ -1,0 +1,43 @@
+body {
+    background-image: linear-gradient(to left, #dcc2fc, #94c6fc);
+}
+
+section {
+    width: 50%;
+    height: 200px;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div {
+    margin: auto;
+    padding: 10px;
+}
+
+form {
+    text-align: center;
+    padding: 50px 5px;
+
+}
+
+input[type="submit"] {
+    background-color: #9e53f9;
+    border: none;
+    padding: 5px 15px;
+    color: white;
+    border-radius: 5px;
+}
+
+#error {
+    color: red;
+    font-size: 12px;
+}
+
+#success {
+    color: green;
+    font-size: 24px;
+}

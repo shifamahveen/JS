@@ -1,0 +1,18 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main {
+    background-color: rgb(239, 213, 179);
+    height: 400px;
+    width: 400px;
+    text-align: center;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+}

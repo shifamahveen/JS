@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/form.css">
+</head>
+<body>
+    <section>
+        <form action="">
+            <div id="success"></div>
+
+            <h1>Register</h1>
+
+            <div>
+                <label for="">Name</label>
+                <input type="text" required>
+            </div>
+            <div>
+                <label for="">Email</label>
+                <input type="email" required>
+            </div>
+            <div>
+                <label for="">Password</label>
+                <input type="password" id="password" value="12345" required>
+                <div id="error"></div>
+            </div>
+            <input type="submit" value="Register">
+        </form>
+    </section>
+
+    <script>
+        let form = document.querySelector("form");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let password = document.getElementById("password").value;
+            let error = document.getElementById("error");
+            let success = document.getElementById("success");
+            let isValid = true;
+
+            if(!validatePassword(password)) {
+                error.innerText = "Password should contain 8 chars & it must require atleast a digit";
+                isValid = false;
+            }
+            if(isValid) {
+                success.innerText = "Form submitted successfully";
+            }
+
+        });
+
+        function validatePassword(password) {
+            let checkDigit = /\d/g;
+
+            return password.length >= 8 && checkDigit.test(password);
+        }
+    </script>
+</body>
+</html>
