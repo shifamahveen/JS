@@ -1,3 +1,8 @@
+body {
+    background-image: linear-gradient(to left, #dcc2fc, #94c6fc);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 section {
     display: flex;
     justify-content: center;
@@ -6,13 +11,40 @@ section {
 }
 
 .main {
-    background-color: rgb(239, 213, 179);
+    background-color: white;
     height: 400px;
-    width: 400px;
+    width: 600px;
     text-align: center;
+    padding: 30px;
+    padding-top: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px gray;
 }
 
 .choices {
     display: flex;
     justify-content: space-around;
+    margin: 25px 0;
+}
+
+.choice {
+    padding: 10px;
+    box-shadow: 4px 4px 10px gray;
+    border-radius: 10px;
+}
+.choice:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+.choice:not(:first-of-type) {
+    padding: 20px;
+}
+#user {
+    color: #94c6fc;
+}
+#computer {
+    color: #94c6fc;
+}
+#result {
+    color: blueviolet;
 }
