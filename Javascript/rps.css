@@ -1,0 +1,27 @@
+body {
+    background: linear-gradient(#fad0c4, #ffd1ff);
+}
+
+#container {
+    background-color: white;
+    width: 60vw;
+    border-radius: 5px;
+    margin: 50px auto ;
+}
+
+.choice {
+    box-shadow: 1px 1px 4px gray;
+    width: min-content;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- inline -->
+    <button onclick="alert('Inline Js')">Click Here!</button>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, quidem!</p>
+
+    <script>
+        let btn = document.querySelector("button");
+
+        // Event Object
+        btn.onclick = (event) => {            
+            alert("Internal JS")
+            console.log(event);
+            console.log(event.target);
+            console.log(event.type);
+        }
+    </script>
+    
+</body>
+</html>

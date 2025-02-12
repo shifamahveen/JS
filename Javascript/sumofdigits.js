@@ -1,0 +1,13 @@
+function sumOfDigits(n) {
+    let sum = 0;
+
+    while (n>0) {
+        sum += n%10;
+        n = parseInt(n/10);
+    }
+
+    return sum;
+}
+
+let x = sumOfDigits(123)
+console.log(x);
